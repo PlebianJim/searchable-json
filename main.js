@@ -10,7 +10,7 @@ async function search() {
         }
     }
     if (spell) {
-        let tableHTML = `<table><tbody>`;
+        let tableHTML = `<table><thead><tr><th colspan="2">${searchTerm.toUpperCase()}</th></tr></thead><tbody>`;
         for (const title in spell) {
             tableHTML += `<tr><td>${title}</td><td>${spell[title]}</td></tr>`;
         }
